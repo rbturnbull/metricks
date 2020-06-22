@@ -19,7 +19,8 @@ def history_plot( history, metric, width=12, height=12 ):
     plt.style.use("ggplot")
 
     plt.figure(figsize=(width,height));
-    plt.plot(history[metric]);
-    plt.plot(history["val_"+metric]);
+    plt.plot(history[metric], label="training "+metric);
+    plt.plot(history["val_"+metric], label="validation "+metric);
     plt.title(metric);
+    plt.legend(loc="best")
     plt.show();

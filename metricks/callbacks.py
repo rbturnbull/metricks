@@ -103,7 +103,7 @@ class SecondaryModelCheckpoint(tf.keras.callbacks.Callback):
 
 import time
 class TimeHistory(tf.keras.callbacks.Callback):
-    """ Saves the time for each epoch in the keras training log """
+    """ Saves the time for each epoch in the keras training log. """
     def on_train_begin(self, logs={}):
         self.time_start = time.time()
 
